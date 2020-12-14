@@ -11,6 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
+//to connect to mongoose and necessary for deployment
 mongoose.connect(
     process.env.MONGODB_URI || 'mongodb://localhost/workout-tracker',
     {
